@@ -2,7 +2,7 @@ __target__: ar
 record_res: False
 output_path: ./tmp/rignet
 val_interval: 3
-val_start_from: 50
+val_start_from: 30
 generate_kwargs:
   max_new_tokens: 510
   num_return_sequences: 1

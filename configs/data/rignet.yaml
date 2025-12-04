@@ -13,15 +13,7 @@ train_dataset_config:
     num_files: 50000
     data_path:
       rignet: [
-        [./datalist/biped_train.txt, 1.0],
-        [./datalist/bird_flyer_train.txt, 1.0],
-        [./datalist/insect_arachnid_train.txt, 1.0],
-        [./datalist/mixamo_train.txt, 1.0],
-        [./datalist/other_train.txt, 1.0],
-        [./datalist/quadruped_train.txt, 1.0],
-        [./datalist/static_train.txt, 1.0],
-        [./datalist/vroid_train.txt, 1.0],
-        [./datalist/water_creature_train.txt, 1.0],
+        [./datalist/rignet_train.txt, 1.0],
       ]
 
 validate_dataset_config:
@@ -35,13 +27,5 @@ validate_dataset_config:
     use_prob: False
     data_path:
       rignet: [
-        [./datalist/biped_test.txt, 1.0],
-        [./datalist/bird_flyer_test.txt, 1.0],
-        [./datalist/insect_arachnid_test.txt, 1.0],
-        [./datalist/mixamo_test.txt, 1.0],
-        [./datalist/other_test.txt, 1.0],
-        [./datalist/quadruped_test.txt, 1.0],
-        [./datalist/static_test.txt, 1.0],
-        [./datalist/vroid_test.txt, 1.0],
-        [./datalist/water_creature_test.txt, 1.0],
+        [./datalist/rignet_test.txt, 1.0],
       ]

@@ -10,7 +10,7 @@ llm:
 mesh_encoder:
   __target__: michelangelo_encoder
   freeze_encoder: False
-  device: cpu
+  device: cuda
   dtype: float32
   num_latents: 256
   embed_dim: 64

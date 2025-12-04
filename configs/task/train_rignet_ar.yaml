@@ -39,8 +39,8 @@ trainer:
 
 wandb:
   name: *experiment_name
-  # entity: your_entity
-  # project: your_project
+  entity: kasimesen-34
+  project: unirig_rignet
   offline: False
   tags: [*experiment_name, unirig]
   # resume: must
