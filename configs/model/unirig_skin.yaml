@@ -19,8 +19,9 @@ mesh_encoder:
   cls_mode: False
   shuffle_orders: True
   drop_path: 0.0
-  upcast_attention: False
-  upcast_softmax: False
+  enable_flash: False
+  upcast_attention: True
+  upcast_softmax: True
   enc_depths: [3, 3, 3, 6, 16]
   enc_channels: [32, 64, 128, 256, 384]
   enc_num_head: [2, 4, 8, 16, 24]

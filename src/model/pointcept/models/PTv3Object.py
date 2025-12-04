@@ -9,11 +9,6 @@ from timm.models.layers import DropPath
 from typing import Union
 from einops import rearrange
 
-try:
-    import flash_attn
-except ImportError:
-    flash_attn = None
-
 from .utils.misc import offset2bincount
 from .utils.structure import Point
 from .modules import PointModule, PointSequential
@@ -72,7 +67,7 @@ class SerializedAttention(PointModule):
         proj_drop=0.0,
         order_index=0,
         enable_rpe=False,
-        enable_flash=True,
+        enable_flash=False,
         upcast_attention=True,
         upcast_softmax=True,
         enable_qknorm=False,
@@ -568,7 +563,7 @@ class PointTransformerV3Object(PointModule):
         pre_norm=True,
         shuffle_orders=True,
         enable_rpe=False,
-        enable_flash=True,
+        enable_flash=False,
         upcast_attention=False,
         upcast_softmax=False,
         cls_mode=False,

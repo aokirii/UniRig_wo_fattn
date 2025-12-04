@@ -345,6 +345,10 @@ def discretize(
     continuous_range: Tuple[float, float],
     num_discrete: int,
 ) -> ndarray:
+    # tails None ise hiçbir şey yapmadan geri dön
+    if t is None:
+        return None
+
     lo, hi = continuous_range
     assert hi >= lo
     t = (t - lo) / (hi - lo)

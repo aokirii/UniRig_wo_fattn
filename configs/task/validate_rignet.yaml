@@ -1,7 +1,7 @@
 mode: validate
 debug: False
 experiment_name: validate
-resume_from_checkpoint: experiments/skeleton/rignet/model.ckpt
+# resume_from_checkpoint: experiments/skeleton/rignet/model.ckpt
 
 components:
   data: rignet
@@ -15,4 +15,4 @@ trainer:
   devices: 1
   precision: bf16-mixed
   accelerator: gpu
-  strategy: ddp
+  strategy: auto

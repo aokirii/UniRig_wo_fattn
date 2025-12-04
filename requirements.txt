@@ -8,7 +8,6 @@ addict
 timm
 fast-simplification
 bpy==4.2
-flash_attn
 trimesh
 open3d
 pyrender

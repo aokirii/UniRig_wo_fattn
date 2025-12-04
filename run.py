@@ -24,6 +24,8 @@ from src.system.parse import get_system, get_writer
 
 from tqdm import tqdm
 import time
+from torch.serialization import add_safe_globals
+add_safe_globals([Box])
 
 def load(task: str, path: str) -> Box:
     if path.endswith('.yaml'):
