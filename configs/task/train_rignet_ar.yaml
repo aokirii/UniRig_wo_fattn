@@ -2,7 +2,7 @@ mode: train
 debug: False
 experiment_name: &experiment_name train_rignet_ar
 # resume_from_checkpoint: experiments/train_rignet_ar/last.ckpt
-epochs: &epochs 1
+epochs: &epochs 250
 
 components:
   data: rignet
@@ -24,6 +24,7 @@ scheduler:
   div_factor: 5.0
   final_div_factor: 10.0
   epochs: *epochs
+  total_steps: 200000
 
 loss:
   ce_loss: 1.0
@@ -36,11 +37,12 @@ trainer:
   accelerator: gpu
   strategy: auto
   num_sanity_val_steps: 0
+  max_epochs: 250
 
 wandb:
   name: *experiment_name
-  entity: kasimesen-34
-  project: unirig_rignet
+  # entity: kasimesen-34
+  # project: unirig_rignet
   offline: False
   tags: [*experiment_name, unirig]
   # resume: must
