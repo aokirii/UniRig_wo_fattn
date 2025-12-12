@@ -11,8 +11,8 @@ llm:
 mesh_encoder:
   __target__: michelangelo_encoder
   freeze_encoder: False
-  device: cpu
-  dtype: float32
+  device: cuda
+  dtype: bf16
   num_latents: 512
   embed_dim: 64
   point_feats: 3
@@ -23,7 +23,7 @@ mesh_encoder:
   num_encoder_layers: 16
   use_ln_post: True
   init_scale: 0.25
-  qkv_bias: 
+  qkv_bias: True
   use_checkpoint: False
   flash: True
   supervision_type: sdf
