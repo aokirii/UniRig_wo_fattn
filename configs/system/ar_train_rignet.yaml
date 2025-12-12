@@ -1,8 +1,8 @@
 __target__: ar
 record_res: False
 output_path: ./tmp/rignet
-val_interval: 3
-val_start_from: 30
+val_interval: 1
+val_start_from: 0
 generate_kwargs:
   max_new_tokens: 510
   num_return_sequences: 1
